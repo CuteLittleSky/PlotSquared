@@ -16,7 +16,9 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Clean Build
+      - name: Clean Build1
+        run: ./gradlew :PlotSquared-Bukkit:spotlessApply
+      - name: Clean Build2
         run: ./gradlew clean build
 
       - name: Upload Artifacts
